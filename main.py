@@ -60,7 +60,7 @@ s_total = s_bruto + s_Iva
 
 # Ahora concatenamos varias series para hacer un dataframe:
 'con el metodo .concat() podemos concatenar en este caso una lista de series'
-'con el axis=1, le decimos que organice los valores, ya que por defecto truncara uno con otros= una liista infinita'
+'Cuando concatenamos DataFrames, necesitamos especificar el eje. axis=0 dice pandas para apilar el segundo DataFrame debajo del primero. Será automáticamente detecta si los nombres de las columnas son iguales y se apilarán en consecuencia. axis=1 apilará las columnas en el segundo DataFrame a la DERECHA del primer DataFrame'
 resultados0 = pd.concat([sdm_precio,sdm_cantidad,s_bruto,s_Iva,s_total], axis=1)
 
 # Ponemos nombre a las columnas del datafram dado:
